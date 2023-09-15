@@ -57,13 +57,17 @@ sentence=sentence.downcase.split(" ")
 
 #Making new has to store the words
 words = Hash.new
+
+#Array takes one value
 sentence.each do |i|
     if words[i] == nil
         words[i] = 1
+        puts "Pooja Singh"
     else
         words[i] += 1
     end
 end
+#Hash takes key and value in each loop
 words.each do |eachword, count|
     puts "#{eachword}: #{count}"
 end
