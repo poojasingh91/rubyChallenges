@@ -1,11 +1,19 @@
 def ordinal(number)
-  if(number==1)
-    "#{number}st"
-  elsif(number==2)
-    "#{number}nd"
-  elsif(number==3)
-    "#{number}rd"
-  else
+  if(number%100==11)
     "#{number}th"
+  elsif(number%100==12)
+    "#{number}th"
+  elsif(number%100==13)
+    "#{number}th"
+  else
+    if(number%10==1)
+      "#{number}st"
+    elsif(number%10==2)
+      "#{number}nd"
+    elsif(number%10==3)
+      "#{number}rd"
+    else
+      "#{number}th"
+    end
   end
 end
